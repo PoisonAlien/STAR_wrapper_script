@@ -114,4 +114,4 @@ print '[%s]\tAlignment finished. \n' % datetime.datetime.now().strftime("%d-%m-%
 
 logFile = 'cat ' + args.prefix + 'Log.final.out'
 
-
+os.system(logFile)
