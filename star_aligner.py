@@ -57,7 +57,7 @@ quant.add_argument('--quantMode', default='-', dest='quant', choices=['-', 'Tran
 
 ## Output SAM and BAM options
 
-output = parser.add_argument_group('Output: SAM and BAM')
+output = parser.add_argument_group('Output: SAM, BAM and wiggle')
 
 output.add_argument('--outSAMtype', dest='outType', choices=['SAM', 'BAM', 'None'], default='BAM', type=str,
                     help='output type')
@@ -109,7 +109,7 @@ print("Effective STAR command:\n")
 print(starCommand)
 
 print '\n[%s]\tAlignment started. \n' % datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
-#os.system(starCommand)
+os.system(starCommand)
 print '[%s]\tAlignment finished. \n' % datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 
 logFile = 'cat ' + args.prefix + 'Log.final.out'
